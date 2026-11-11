@@ -7,8 +7,8 @@ find_package(Threads REQUIRED)
 set(DRM_PLATFORM_SOC_LIBRARY_PATH
     "${CMAKE_INSTALL_FULL_LIBDIR}/libDRMPlatformSoC.so"
     CACHE FILEPATH "Well-known SoC library path")
-option(DRM_PLATFORM_BUILD_EXAMPLE_PLUGIN "Build the example SoC library" ON)
-option(DRM_PLATFORM_BUILD_TESTS "Build loader and dispatch tests" ON)
+option(DRM_PLATFORM_BUILD_EXAMPLE_PLUGIN "Build the example SoC library" OFF)
+option(DRM_PLATFORM_BUILD_TESTS "Build loader and dispatch tests" OFF)
 
 add_library(drm-platform SHARED src/DRMPlatform.cpp)
 add_library(DRMPlatform::drm-platform ALIAS drm-platform)
